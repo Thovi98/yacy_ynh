@@ -29,7 +29,7 @@ ynh_systemd_action --service_name="$app" --action="stop" --log_path="$data_dir/D
 ynh_script_progression --message="Upgrading source files..."
 
 # Download, check integrity, uncompress and patch the source from app.src
-ynh_setup_source --dest_dir="$install_dir" --full_replace
+ynh_setup_source --dest_dir="$install_dir" --full_replace --full_replace=1
 
 
 chmod 750 "$install_dir"
